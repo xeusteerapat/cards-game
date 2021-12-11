@@ -26,3 +26,14 @@ func (d deck) print() {
 		fmt.Println(i, card)
 	}
 }
+
+/* NOTE:
+slice[indexIncluding : upToNotIncluding]
+slice[:2] give me everything from 0 -> 1
+slice[3:] give me everything from 3 -> end
+*/
+
+// Return multiple values with all types of deck
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
+}
